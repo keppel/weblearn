@@ -2,8 +2,9 @@
 
 Modular neural networks for node.js and the browser.
 
-WebLearn borrows almost all of its abstractions and API conventions from [Torch], making it straightforward to translate pretty much anything written in Torch to run on the web.
+It's basically the [WebTorrent] or [WebCoin] of neural networks.
 
+WebLearn borrows almost all of its abstractions and API conventions from [Torch], making it straightforward to translate pretty much anything written in Torch to run on the web.
 
 ## Example
 
@@ -18,7 +19,6 @@ mlp
   .add(Linear(2, 10))
   .add(ReLU())
   .add(Linear(10, 1))
-
 
 const criterion = MSECriterion()
 
@@ -74,7 +74,7 @@ JS has some unique advantages for training neural nets:
  - novel architectures: p2p neural networks over WebRTC? Distributed stochastic gradient descent without data ever needing to leave a user's device for increased privacy? Some new  kinds of mad science become possible when your neural networks are in JavaScript.
 
 ##  Modules
-To add a module to this list, simply publish it as `weblearn-{layer,container,criterion,tensor}-yourmodulename` and it will appear here when the next version of WebLearn is published.
+To add a module to this list, simply publish it on npm as `weblearn-{layer,container,criterion,tensor}-yourmodulename` and it will appear here when the next version of WebLearn is published.
 
 
 | name | version | tests | issues | description |
@@ -135,8 +135,10 @@ To add a module to this list, simply publish it as `weblearn-{layer,container,cr
 [weblearn-tensor-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-tensor.svg
 [weblearn-tensor-iu]: https://github.com/keppel/weblearn-tensor/issues
 
-[Torch]: http://torch.ch/docs/package-docs.html
-
-### writing a module (layer)
+### Writing a module
 
 Check out the [torch docs here](https://github.com/torch/nn/blob/master/doc/module.md) and look at the Linear layer. More docs coming soon.
+
+[Torch]: http://torch.ch/docs/package-docs.html
+[WebTorrent]: https://github.com/feross/webtorrent
+[WebCoin]: https://github.com/mappum/webcoin
