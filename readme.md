@@ -73,26 +73,26 @@ JS has some unique advantages for training neural nets:
 ##  modules
 
 #### layers
-| name | version | description |
-| ---- | ------- | ----------- |
-| weblearn-layer-linear | [![][weblearn-layer-linear-ni]][weblearn-layer-linear-nu] | Simple fully-connected layer |
-| weblearn-layer-relu | [![][weblearn-layer-relu-ni]][weblearn-layer-relu-nu] | Rectified linear unit non-linearity |
-| weblearn-layer-sigmoid | [![][weblearn-layer-sigmoid-ni]][weblearn-layer-sigmoid-nu] | Sigmoid activation layer |
+| name | version | tests | issues | description |
+|---|---|---|---|---|
+| weblearn-layer-linear | [![][weblearn-layer-linear-ni]][weblearn-layer-linear-nu] | [![][weblearn-layer-linear-ti]][weblearn-layer-linear-tu]|[![][weblearn-layer-linear-ii]][weblearn-layer-linear-iu] | Simple fully-connected layer |
+| weblearn-layer-relu | [![][weblearn-layer-relu-ni]][weblearn-layer-relu-nu] | [![][weblearn-layer-relu-ti]][weblearn-layer-relu-tu]|[![][weblearn-layer-relu-ii]][weblearn-layer-relu-iu] | Rectified linear unit non-linearity |
+| weblearn-layer-sigmoid | [![][weblearn-layer-sigmoid-ni]][weblearn-layer-sigmoid-nu] | [![][weblearn-layer-sigmoid-ti]][weblearn-layer-sigmoid-tu]|[![][weblearn-layer-sigmoid-ii]][weblearn-layer-sigmoid-iu] | Sigmoid activation layer |
 
 #### containers
-| name | version | description |
-| ---- | ------- | ----------- |
-| weblearn-container-sequential | [![][weblearn-container-sequential-ni]][weblearn-container-sequential-nu] | Compute child layers in sequence |
+| name | version | tests | issues | description |
+|---|---|---|---|---|
+| weblearn-container-sequential | [![][weblearn-container-sequential-ni]][weblearn-container-sequential-nu] | [![][weblearn-container-sequential-ti]][weblearn-container-sequential-tu]|[![][weblearn-container-sequential-ii]][weblearn-container-sequential-iu] | Compute child layers in sequence |
 
 #### criteria
-| name | version | description |
-| ---- | ------- | ----------- |
-| weblearn-criterion-mse | [![][weblearn-criterion-mse-ni]][weblearn-criterion-mse-nu] | Compute child layers in sequence |
+| name | version | tests | issues | description |
+|---|---|---|---|---|
+| weblearn-criterion-mse | [![][weblearn-criterion-mse-ni]][weblearn-criterion-mse-nu] | [![][weblearn-criterion-mse-ti]][weblearn-criterion-mse-tu]|[![][weblearn-criterion-mse-ii]][weblearn-criterion-mse-iu] | Compute child layers in sequence |
 
 #### tensors
-| name | version | description |
-| ---- | ------- | ----------- |
-| weblearn-tensor | [![][weblearn-tensor-ni]][weblearn-tensor-nu] | Single-process CPU tensor class |
+| name | version | tests | issues | description |
+|---|---|---|---|---|
+| weblearn-tensor | [![][weblearn-tensor-ni]][weblearn-tensor-nu] | [![][weblearn-layer-linear-ti]][weblearn-layer-linear-tu]|[![][weblearn-layer-linear-ii]][weblearn-layer-linear-iu] | Single-process CPU tensor class |
 
 
 [weblearn-layer-linear-ni]: https://img.shields.io/npm/v/weblearn-layer-linear.svg
