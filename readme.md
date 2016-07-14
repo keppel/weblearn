@@ -50,10 +50,13 @@ for(let i = 0; i < 2000; i++){
 
 let out = mlp.forward(Tensor([0, 0]))
 console.log(out.values) // [ 0 ]
+
 out = mlp.forward(Tensor([0, 1]))
 console.log(out.values) // [ 1 ]
+
 out = mlp.forward(Tensor([1, 0]))
 console.log(out.values) // [ 1 ]
+
 out = mlp.forward(Tensor([1, 1]))
 console.log(out.values) // [ 0 ]
 
@@ -70,18 +73,21 @@ JS has some unique advantages for training neural nets:
 
  - novel architectures: p2p neural networks over WebRTC? Distributed stochastic gradient descent without data ever needing to leave a user's device for increased privacy? Some new  kinds of mad science become possible when your neural networks are in JavaScript.
 
-##  modules
+##  Modules
+To add a module to this list, simply publish it as `weblearn-{layer,container,criterion,tensor}-yourmodulename` and it will appear here when the next version of WebLearn is published.
+
 
 | name | version | tests | issues | description |
 |---|---|---|---|---|
-| weblearn-layer-linear | [![][weblearn-layer-linear-ni]][weblearn-layer-linear-nu] | [![][weblearn-layer-linear-ti]][weblearn-layer-linear-tu]|[![][weblearn-layer-linear-ii]][weblearn-layer-linear-iu] | Simple fully-connected layer |
-| weblearn-layer-relu | [![][weblearn-layer-relu-ni]][weblearn-layer-relu-nu] | [![][weblearn-layer-relu-ti]][weblearn-layer-relu-tu]|[![][weblearn-layer-relu-ii]][weblearn-layer-relu-iu] | Rectified linear unit non-linearity |
-| weblearn-layer-sigmoid | [![][weblearn-layer-sigmoid-ni]][weblearn-layer-sigmoid-nu] | [![][weblearn-layer-sigmoid-ti]][weblearn-layer-sigmoid-tu]|[![][weblearn-layer-sigmoid-ii]][weblearn-layer-sigmoid-iu] | Sigmoid activation layer |
-| weblearn-container-sequential | [![][weblearn-container-sequential-ni]][weblearn-container-sequential-nu] | [![][weblearn-container-sequential-ti]][weblearn-container-sequential-tu]|[![][weblearn-container-sequential-ii]][weblearn-container-sequential-iu] | Compute child layers in sequence |
-| weblearn-criterion-mse | [![][weblearn-criterion-mse-ni]][weblearn-criterion-mse-nu] | [![][weblearn-criterion-mse-ti]][weblearn-criterion-mse-tu]|[![][weblearn-criterion-mse-ii]][weblearn-criterion-mse-iu] | Compute child layers in sequence |
-| weblearn-tensor | [![][weblearn-tensor-ni]][weblearn-tensor-nu] | [![][weblearn-layer-linear-ti]][weblearn-layer-linear-tu]|[![][weblearn-layer-linear-ii]][weblearn-layer-linear-iu] | Single-process CPU tensor class |
+| [weblearn-layer-linear][weblearn-layer-linear] | [![][weblearn-layer-linear-ni]][weblearn-layer-linear-nu] | [![][weblearn-layer-linear-ti]][weblearn-layer-linear-tu]|[![][weblearn-layer-linear-ii]][weblearn-layer-linear-iu] | Simple fully-connected layer |
+| [weblearn-layer-relu][weblearn-layer-relu] | [![][weblearn-layer-relu-ni]][weblearn-layer-relu-nu] | [![][weblearn-layer-relu-ti]][weblearn-layer-relu-tu]|[![][weblearn-layer-relu-ii]][weblearn-layer-relu-iu] | Rectified linear unit non-linearity |
+| [weblearn-layer-sigmoid][weblearn-layer-sigmoid] | [![][weblearn-layer-sigmoid-ni]][weblearn-layer-sigmoid-nu] | [![][weblearn-layer-sigmoid-ti]][weblearn-layer-sigmoid-tu]|[![][weblearn-layer-sigmoid-ii]][weblearn-layer-sigmoid-iu] | Sigmoid activation layer |
+| [weblearn-container-sequential][weblearn-container-sequential] | [![][weblearn-container-sequential-ni]][weblearn-container-sequential-nu] | [![][weblearn-container-sequential-ti]][weblearn-container-sequential-tu]|[![][weblearn-container-sequential-ii]][weblearn-container-sequential-iu] | Compute child layers in sequence |
+| [weblearn-criterion-mse][weblearn-criterion-mse] | [![][weblearn-criterion-mse-ni]][weblearn-criterion-mse-nu] | [![][weblearn-criterion-mse-ti]][weblearn-criterion-mse-tu]|[![][weblearn-criterion-mse-ii]][weblearn-criterion-mse-iu] | Compute child layers in sequence |
+| [weblearn-tensor][weblearn-tensor] | [![][weblearn-tensor-ni]][weblearn-tensor-nu] | [![][weblearn-layer-linear-ti]][weblearn-layer-linear-tu]|[![][weblearn-layer-linear-ii]][weblearn-layer-linear-iu] | Single-process CPU tensor class |
 
 
+[weblearn-layer-linear]: https://github.com/keppel/weblearn-layer-linear
 [weblearn-layer-linear-ni]: https://img.shields.io/npm/v/weblearn-layer-linear.svg
 [weblearn-layer-linear-nu]: https://www.npmjs.com/package/weblearn-layer-linear
 [weblearn-layer-linear-ti]: https://img.shields.io/travis/keppel/weblearn-layer-linear.svg
@@ -89,6 +95,7 @@ JS has some unique advantages for training neural nets:
 [weblearn-layer-linear-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-layer-linear.svg
 [weblearn-layer-linear-iu]: https://github.com/keppel/weblearn-layer-linear/issues
 
+[weblearn-layer-relu]: https://github.com/keppel/weblearn-layer-relu
 [weblearn-layer-relu-ni]: https://img.shields.io/npm/v/weblearn-layer-relu.svg
 [weblearn-layer-relu-nu]: https://www.npmjs.com/package/weblearn-layer-relu
 [weblearn-layer-relu-ti]: https://img.shields.io/travis/keppel/weblearn-layer-relu.svg
@@ -96,6 +103,7 @@ JS has some unique advantages for training neural nets:
 [weblearn-layer-relu-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-layer-relu.svg
 [weblearn-layer-relu-iu]: https://github.com/keppel/weblearn-layer-relu/issues
 
+[weblearn-layer-sigmoid]: https://github.com/keppel/weblearn-layer-sigmoid
 [weblearn-layer-sigmoid-ni]: https://img.shields.io/npm/v/weblearn-layer-sigmoid.svg
 [weblearn-layer-sigmoid-nu]: https://www.npmjs.com/package/weblearn-layer-sigmoid
 [weblearn-layer-sigmoid-ti]: https://img.shields.io/travis/keppel/weblearn-layer-sigmoid.svg
@@ -103,6 +111,7 @@ JS has some unique advantages for training neural nets:
 [weblearn-layer-sigmoid-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-layer-sigmoid.svg
 [weblearn-layer-sigmoid-iu]: https://github.com/keppel/weblearn-layer-sigmoid/issues
 
+[weblearn-container-sequential]: https://github.com/keppel/weblearn-container-sequential
 [weblearn-container-sequential-ni]: https://img.shields.io/npm/v/weblearn-container-sequential.svg
 [weblearn-container-sequential-nu]: https://www.npmjs.com/package/weblearn-container-sequential
 [weblearn-container-sequential-ti]: https://img.shields.io/travis/keppel/weblearn-container-sequential.svg
@@ -110,6 +119,7 @@ JS has some unique advantages for training neural nets:
 [weblearn-container-sequential-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-container-sequential.svg
 [weblearn-container-sequential-iu]: https://github.com/keppel/weblearn-container-sequential/issues
 
+[weblearn-criterion-mse]: https://github.com/keppel/weblearn-criterion-mse
 [weblearn-criterion-mse-ni]: https://img.shields.io/npm/v/weblearn-criterion-mse.svg
 [weblearn-criterion-mse-nu]: https://www.npmjs.com/package/weblearn-criterion-mse
 [weblearn-criterion-mse-ti]: https://img.shields.io/travis/keppel/weblearn-criterion-mse.svg
@@ -117,6 +127,7 @@ JS has some unique advantages for training neural nets:
 [weblearn-criterion-mse-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-criterion-mse.svg
 [weblearn-criterion-mse-iu]: https://github.com/keppel/weblearn-criterion-mse/issues
 
+[weblearn-tensor]: https://github.com/keppel/weblearn-tensor
 [weblearn-tensor-ni]: https://img.shields.io/npm/v/weblearn-tensor.svg
 [weblearn-tensor-nu]: https://www.npmjs.com/package/weblearn-tensor
 [weblearn-tensor-ti]: https://img.shields.io/travis/keppel/weblearn-tensor.svg
