@@ -85,7 +85,7 @@ To add a module to this list, simply publish it on npm as `weblearn-{layer,conta
 | [weblearn-layer-relu][weblearn-layer-relu] | [![][weblearn-layer-relu-ni]][weblearn-layer-relu-nu] | [![][weblearn-layer-relu-ti]][weblearn-layer-relu-tu]|[![][weblearn-layer-relu-ii]][weblearn-layer-relu-iu] | Rectified linear unit non-linearity |
 | [weblearn-layer-sigmoid][weblearn-layer-sigmoid] | [![][weblearn-layer-sigmoid-ni]][weblearn-layer-sigmoid-nu] | [![][weblearn-layer-sigmoid-ti]][weblearn-layer-sigmoid-tu]|[![][weblearn-layer-sigmoid-ii]][weblearn-layer-sigmoid-iu] | Sigmoid activation layer |
 | [weblearn-container-sequential][weblearn-container-sequential] | [![][weblearn-container-sequential-ni]][weblearn-container-sequential-nu] | [![][weblearn-container-sequential-ti]][weblearn-container-sequential-tu]|[![][weblearn-container-sequential-ii]][weblearn-container-sequential-iu] | Compute child layers in sequence |
-| [weblearn-criterion-mse][weblearn-criterion-mse] | [![][weblearn-criterion-mse-ni]][weblearn-criterion-mse-nu] | [![][weblearn-criterion-mse-ti]][weblearn-criterion-mse-tu]|[![][weblearn-criterion-mse-ii]][weblearn-criterion-mse-iu] | Compute child layers in sequence |
+| [weblearn-criterion-mse][weblearn-criterion-mse] | [![][weblearn-criterion-mse-ni]][weblearn-criterion-mse-nu] | [![][weblearn-criterion-mse-ti]][weblearn-criterion-mse-tu]|[![][weblearn-criterion-mse-ii]][weblearn-criterion-mse-iu] | Mean squared error criterion |
 | [weblearn-tensor][weblearn-tensor] | [![][weblearn-tensor-ni]][weblearn-tensor-nu] | [![][weblearn-layer-linear-ti]][weblearn-layer-linear-tu]|[![][weblearn-layer-linear-ii]][weblearn-layer-linear-iu] | Single-process CPU tensor class |
 
 
@@ -139,7 +139,7 @@ To add a module to this list, simply publish it on npm as `weblearn-{layer,conta
 
 ### Writing a module
 
-Check out the [torch docs here](https://github.com/torch/nn/blob/master/doc/module.md) and look at [WebLearn's Linear layer][https://github.com/keppel/weblearn-layer-linear] as an example. More docs coming soon.
+Check out the [Torch docs here](https://github.com/torch/nn/blob/master/doc/module.md) and look at [WebLearn's Linear layer](https://github.com/keppel/weblearn-layer-linear) as an example. More docs coming soon.
 
 [Torch]: http://torch.ch/docs/package-docs.html
 [WebTorrent]: https://github.com/feross/webtorrent
