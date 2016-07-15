@@ -31,7 +31,7 @@ Since WebLearn is written completely in JavaScript, you can run the exact same c
 
 WebLearn is extremely modular. The core WebLearn package is tiny, but it's been carefully designed to spawn a rich ecosystem of modules and tools. You can drop in new types of layers, visualizations, criteria, etc-- all with a simple `require()`
 
-We borrow pretty much all of our abstractions and API conventions from [Torch], which makes it straightforward to translate pretty much anything written in Torch to run on the web.
+We borrow most of our abstractions and API conventions from [Torch], which makes it straightforward to translate pretty much anything written in Torch to run on the web.
 
 It's basically the [WebTorrent] or [Webcoin] of neural networks.
 

@@ -2,21 +2,23 @@ const old = require('old')
 
 module.exports = {
   // activations
-  ReLU: old(require('./lib/ReLU.js')),
-  Tanh: old(require('./lib/Tanh.js')),
-  Sigmoid: old(require('./lib/Sigmoid.js')),
+  ReLU: require('weblearn-layer-relu'),
+  Sigmoid: require('weblearn-layer-sigmoid'),
 
   // simple layers
   Module: old(require('./lib/Module.js')),
-  Linear: old(require('./lib/Linear.js')),
+  Linear: require('weblearn-layer-linear'),
 
   // containers
   Container: old(require('./lib/Container.js')),
-  Sequential: old(require('./lib/Container-Sequential.js')),
+  Sequential: require('weblearn-container-sequential'),
   
   // criteria
   Criterion: old(require('./lib/Criterion.js')),
-  MSECriterion: old(require('./lib/Criterion-MSE.js')),
+  MSECriterion: require('weblearn-criterion-mse'),
 
-  Tensor: old(require('./lib/Tensor.js'))
+  Tensor: require('weblearn-tensor'),
+
+  // convolutions
+  TemporalConvolution: old(require('./lib/TemporalConvolution.js'))
 }
