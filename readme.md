@@ -6,7 +6,11 @@ WebLearn borrows almost all of its abstractions and API conventions from [Torch]
 
 It's basically the [WebTorrent] or [Webcoin] of neural networks.
 
-## Example
+## Usage
+
+```
+npm install weblearn
+```
 
 ```js
 // supervised learning of the xor function with manual parameter updates
