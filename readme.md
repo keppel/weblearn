@@ -27,11 +27,15 @@
 
 **WebLearn** makes it super easy to write and train deep neural networks in JavaScript!
 
-The core WebLearn package is small, but it's been carefully designed to spawn an ecosystem of modules and tools which you can drop into your model with a simple `require()`. We borrow most of our abstractions and API conventions from [Torch], making it straightforward to translate pretty much anything written in Torch to run on the web.
+Since WebLearn is written completely in JavaScript, you can run the exact same code in the browser with browserify or in node.js! 
+
+WebLearn is extremely modular. The core WebLearn package is tiny, but it's been carefully designed to spawn a rich ecosystem of modules and tools. You can drop in new types of layers, visualizations, criteria, etc-- all with a simple `require()`! 
+
+We borrow pretty much all of our abstractions and API conventions from [Torch], which makes it straightforward to translate pretty much anything written in Torch to run on the web!
 
 It's basically the [WebTorrent] or [Webcoin] of neural networks.
 
-If you're a JavaScript hacker who works on real products and is aware that Deep Learning™ is a big deal, but you don't know everything about neural networks, WebLearn is for you. It's just JavaScript-- read the source and watch the mysticism around machine learning disappear. Or just snap together some layers from npm and don't give it a second thought!
+If you're a JavaScript hacker, you may be aware that Deep Learning™ is a big deal, but maybe you've never actually used a neural network. WebLearn is for you. It's just JavaScript-- read the source and watch the mysticism around machine learning disappear. Or just snap together some layers from npm and don't give it a second thought!
 
 AI will belong to the hackers / tinkerers of the world, and there's no larger community of tinkerers than npm / JavaScript users. **WebLearn** is a hackable-to-the-core pure JavaScript machine learning framework-- go forth and use it in the name of science!
 
