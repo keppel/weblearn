@@ -1,6 +1,13 @@
-# WebLearn
+<h1 align="center">
+  <br>
+  <a href="https://github.com/keppel/weblearn"><img src="https://cloud.githubusercontent.com/assets/1269291/16877097/92525c16-4a9e-11e6-9e7d-d78dcf924ff7.png" alt="WebLearn" width="200"></a>
+  <br>
+  WebTorrent
+  <br>
+  <br>
+</h1>
 
-Modular neural networks for node.js and the browser.
+<h4 align="center">Modular neural networks for node.js and the browser.</h4>
 
 WebLearn borrows almost all of its abstractions and API conventions from [Torch], making it straightforward to translate pretty much anything written in Torch to run on the web.
 
