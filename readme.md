@@ -48,7 +48,11 @@ npm install weblearn
 ```js
 // supervised learning of the xor function with manual parameter updates
 
-const { Sequential, Linear, MSECriterion, ReLU, Tensor } = require('weblearn')
+const Sequential = require('weblearn-container-sequential')
+const Linear = require('weblearn-layer-linear')
+const MSECriterion = require('weblearn-criterion-mse')
+const ReLU = require('weblearn-layer-relu')
+const Tensor = require('weblearn-tensor')
 
 
 const mlp = Sequential()
