@@ -1,6 +1,6 @@
 {
   "name": "weblearn",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "modular neural networks for node.js and the browser",
   "main": "index.js",
   "directories": {
