@@ -71,15 +71,15 @@ console.log(out.values) // [ 0 ]
 
 JS has some unique advantages for training neural nets:
 
- - Runtime availability: bundle your neural net into a single .js file and deploy it to your users! No installations, permissions, etc. Let your users bring their own compute to the deep learning-enabled features in your app.
+ - **Runtime availability**: bundle your neural net into a single .js file and deploy it to your users! No installations, permissions, etc. Let your users bring their own compute to the deep learning-enabled features in your app.
 
- - Speed: when it comes to doing math on a CPU, JavaScript is actually very fast. It can also talk to the host's GPU to do the math there!
+ - **Speed**: when it comes to doing math on a CPU, JavaScript is actually very fast. It can also talk to the host's GPU to do math there!
 
- - Portability: you can run the exact same model in your user's browser and on your own servers with node. You can train your net on the client, pass the parameters to the server, and sample from it there. Or vice versa!
+ - **Portability**: you can run the exact same model in your user's browser and on your own servers with node. You can train your net on the client, pass the parameters to the server, and sample from it there. Or vice versa!
 
- - Community: lots of people know JavaScript and use npm. This makes it easier to develop a healthy ecosystem of WebLearn modules for you to use.
+ - **Community**: lots of people know JavaScript and use npm. This makes it easier to develop a healthy ecosystem of WebLearn modules for you to use.
 
- - Novel architectures: p2p neural networks over WebRTC? Distributed stochastic gradient descent without data ever needing to leave a user's device for increased privacy? Some new  kinds of mad science become possible when your neural networks are in JavaScript.
+ - **Novel architectures**: p2p neural networks over WebRTC? Distributed stochastic gradient descent without data ever needing to leave a user's device for increased privacy? Some new  kinds of mad science become possible when your neural networks are in JavaScript.
 
 ##  Modules
 The main `weblearn` module contains only a few abstract classes that other modules will extend. Most of WebLearn's functionality lives in other modules in repositories listed here.
