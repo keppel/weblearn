@@ -2,9 +2,9 @@
 
 Modular neural networks for node.js and the browser.
 
-It's basically the [WebTorrent] or [WebCoin] of neural networks.
-
 WebLearn borrows almost all of its abstractions and API conventions from [Torch], making it straightforward to translate pretty much anything written in Torch to run on the web.
+
+It's basically the [WebTorrent] or [Webcoin] of neural networks.
 
 ## Example
 
@@ -74,6 +74,8 @@ JS has some unique advantages for training neural nets:
  - novel architectures: p2p neural networks over WebRTC? Distributed stochastic gradient descent without data ever needing to leave a user's device for increased privacy? Some new  kinds of mad science become possible when your neural networks are in JavaScript.
 
 ##  Modules
+The main `weblearn` module contains only a few abstract classes that other modules will extend. Most of WebLearn's functionality lives in other modules in repositories listed here.
+
 To add a module to this list, simply publish it on npm as `weblearn-{layer,container,criterion,tensor}-yourmodulename` and it will appear here when the next version of WebLearn is published.
 
 
@@ -137,8 +139,8 @@ To add a module to this list, simply publish it on npm as `weblearn-{layer,conta
 
 ### Writing a module
 
-Check out the [torch docs here](https://github.com/torch/nn/blob/master/doc/module.md) and look at the Linear layer. More docs coming soon.
+Check out the [torch docs here](https://github.com/torch/nn/blob/master/doc/module.md) and look at [WebLearn's Linear layer][https://github.com/keppel/weblearn-layer-linear] as an example. More docs coming soon.
 
 [Torch]: http://torch.ch/docs/package-docs.html
 [WebTorrent]: https://github.com/feross/webtorrent
-[WebCoin]: https://github.com/mappum/webcoin
+[Webcoin]: https://github.com/mappum/webcoin
