@@ -48,14 +48,11 @@ npm install weblearn
 ```js
 // supervised learning of the xor function with manual parameter updates
 
-const Sequential = require('weblearn-container-sequential')
-const Linear = require('weblearn-layer-linear')
-const MSECriterion = require('weblearn-criterion-mse')
-const ReLU = require('weblearn-layer-relu')
-const Tensor = require('weblearn-tensor')
-
+const { Sequential, Linear, MSECriterion, ReLU, Tensor } = require('weblearn')
 
 const mlp = Sequential()
+
+// 2 inputs, 10 hidden units, relu activation, 1 output.
 mlp
   .add(Linear(2, 10))
   .add(ReLU())
@@ -90,16 +87,16 @@ for(let i = 0; i < 2000; i++){
 }
 
 let out = mlp.forward(Tensor([0, 0]))
-console.log(out.values) // [ 0 ]
+console.log('[0, 0] -> ' + out.values[0]) // 0 
 
 out = mlp.forward(Tensor([0, 1]))
-console.log(out.values) // [ 1 ]
+console.log('[0, 1] -> ' + out.values[0]) // 1
 
 out = mlp.forward(Tensor([1, 0]))
-console.log(out.values) // [ 1 ]
+console.log('[1, 0] -> ' + out.values[0]) // 1
 
 out = mlp.forward(Tensor([1, 1]))
-console.log(out.values) // [ 0 ]
+console.log('[1, 1] -> ' + out.values[0]) // 0
 
 
 ```
