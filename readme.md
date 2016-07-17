@@ -128,7 +128,12 @@ To add a module to this list, simply publish it on npm as `weblearn-{layer,conta
 | [weblearn-layer-sigmoid][weblearn-layer-sigmoid] | [![][weblearn-layer-sigmoid-ni]][weblearn-layer-sigmoid-nu] | [![][weblearn-layer-sigmoid-ti]][weblearn-layer-sigmoid-tu]|[![][weblearn-layer-sigmoid-ii]][weblearn-layer-sigmoid-iu] | Sigmoid activation layer |
 | [weblearn-container-sequential][weblearn-container-sequential] | [![][weblearn-container-sequential-ni]][weblearn-container-sequential-nu] | [![][weblearn-container-sequential-ti]][weblearn-container-sequential-tu]|[![][weblearn-container-sequential-ii]][weblearn-container-sequential-iu] | Compute child layers in sequence |
 | [weblearn-criterion-mse][weblearn-criterion-mse] | [![][weblearn-criterion-mse-ni]][weblearn-criterion-mse-nu] | [![][weblearn-criterion-mse-ti]][weblearn-criterion-mse-tu]|[![][weblearn-criterion-mse-ii]][weblearn-criterion-mse-iu] | Mean squared error criterion |
-| [weblearn-tensor][weblearn-tensor] | [![][weblearn-tensor-ni]][weblearn-tensor-nu] | [![][weblearn-layer-linear-ti]][weblearn-layer-linear-tu]|[![][weblearn-layer-linear-ii]][weblearn-layer-linear-iu] | Single-process CPU tensor class |
+| [weblearn-tensor][weblearn-tensor] | [![][weblearn-tensor-ni]][weblearn-tensor-nu] | [![][weblearn-tensor-ti]][weblearn-tensor-tu]|[![][weblearn-tensor-ii]][weblearn-tensor-iu] | Single-process CPU tensor class |
+| [weblearn-module][weblearn-module] | [![][weblearn-module-ni]][weblearn-module-nu] | [![][weblearn-module-ti]][weblearn-module-tu]|[![][weblearn-module-ii]][weblearn-module-iu] | Base class for layers |
+| [weblearn-container][weblearn-container] | [![][weblearn-container-ni]][weblearn-container-nu] | [![][weblearn-container-ti]][weblearn-container-tu]|[![][weblearn-container-ii]][weblearn-container-iu] | Base class for containers |
+| [weblearn-criterion][weblearn-criterion] | [![][weblearn-criterion-ni]][weblearn-criterion-nu] | [![][weblearn-criterion-ti]][weblearn-criterion-tu]|[![][weblearn-criterion-ii]][weblearn-criterion-iu] | Base class for criteria |
+
+
 
 
 [weblearn-layer-linear]: https://github.com/keppel/weblearn-layer-linear
@@ -178,6 +183,30 @@ To add a module to this list, simply publish it on npm as `weblearn-{layer,conta
 [weblearn-tensor-tu]: https://travis-ci.org/keppel/weblearn-tensor
 [weblearn-tensor-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-tensor.svg
 [weblearn-tensor-iu]: https://github.com/keppel/weblearn-tensor/issues
+
+[weblearn-criterion]: https://github.com/keppel/weblearn-criterion
+[weblearn-criterion-ni]: https://img.shields.io/npm/v/weblearn-criterion.svg
+[weblearn-criterion-nu]: https://www.npmjs.com/package/weblearn-criterion
+[weblearn-criterion-ti]: https://img.shields.io/travis/keppel/weblearn-criterion.svg
+[weblearn-criterion-tu]: https://travis-ci.org/keppel/weblearn-criterion
+[weblearn-criterion-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-criterion.svg
+[weblearn-criterion-iu]: https://github.com/keppel/weblearn-criterion/issues
+
+[weblearn-container]: https://github.com/keppel/weblearn-container
+[weblearn-container-ni]: https://img.shields.io/npm/v/weblearn-container.svg
+[weblearn-container-nu]: https://www.npmjs.com/package/weblearn-container
+[weblearn-container-ti]: https://img.shields.io/travis/keppel/weblearn-container.svg
+[weblearn-container-tu]: https://travis-ci.org/keppel/weblearn-container
+[weblearn-container-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-container.svg
+[weblearn-container-iu]: https://github.com/keppel/weblearn-container/issues
+
+[weblearn-module]: https://github.com/keppel/weblearn-module
+[weblearn-module-ni]: https://img.shields.io/npm/v/weblearn-module.svg
+[weblearn-module-nu]: https://www.npmjs.com/package/weblearn-module
+[weblearn-module-ti]: https://img.shields.io/travis/keppel/weblearn-module.svg
+[weblearn-module-tu]: https://travis-ci.org/keppel/weblearn-module
+[weblearn-module-ii]: https://img.shields.io/github/issues-raw/keppel/weblearn-module.svg
+[weblearn-module-iu]: https://github.com/keppel/weblearn-module/issues
 
 ### Writing a module
 
