@@ -116,7 +116,7 @@ JS has some unique advantages for training neural nets:
  - **Novel architectures**: p2p neural networks over WebRTC? Distributed stochastic gradient descent without data ever needing to leave a user's device for increased privacy? Some new  kinds of mad science become possible when your neural networks are in JavaScript.
 
 ##  Modules
-The main `weblearn` module contains only a few abstract classes that other modules will extend. Most of WebLearn's functionality lives in other modules in repositories listed here.
+The main WebLearn package is simply a curated map of useful modules. Most of WebLearn's functionality lives in other modules in repositories listed here.
 
 To add a module to this list, simply publish it on npm as `weblearn-{layer,container,criterion,tensor}-yourmodulename` and it will appear here when the next version of WebLearn is published.
 
