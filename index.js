@@ -5,7 +5,7 @@ module.exports = {
   Sigmoid: require('weblearn-layer-sigmoid'),
 
   // criteria
-  MSECriterion: require('weblearn-layer-sigmoid'),
+  MSECriterion: require('weblearn-criterion-mse'),
 
   // containers
   Sequential: require('weblearn-container-sequential'),
