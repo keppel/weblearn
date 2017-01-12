@@ -31,13 +31,17 @@ Since WebLearn is written completely in JavaScript, you can run the exact same c
 
 WebLearn is extremely modular. The core WebLearn package is tiny, but it's been carefully designed to spawn a rich ecosystem of modules and tools. You can drop in new types of layers, visualizations, criteria, etc-- all with a simple `require()`
 
-We borrow most of our abstractions and API conventions from [Torch], which makes it straightforward to translate pretty much anything written in Torch to run on the web.
+We borrow most of our abstractions and API conventions from [Torch] and [Keras]. Translating programs written with Torch to run on the web with WebLearn is especially straightforward.
 
 It's basically the [WebTorrent] or [Webcoin] of neural networks.
 
 If you're a JavaScript hacker, you may be aware that Deep Learning™ is a big deal, but maybe you've never actually used a neural network. WebLearn is for you. It's just JavaScript-- read the source and watch the mysticism around machine learning disappear. Or just snap together some layers from npm and don't give it a second thought!
 
 AI will belong to the hackers / tinkerers of the world, and there's no larger community of tinkerers than npm / JavaScript users. **WebLearn** is a hackable-to-the-core pure JavaScript machine learning framework-- go forth and use it in the name of science!
+
+## v2.x
+
+In version 2, WebLearn eschews using its own tensor class and instead uses [ndarrays] and functions that operate on them.
 
 ## Usage
 
@@ -46,59 +50,33 @@ npm install weblearn
 ```
 
 ```js
-// supervised learning of the xor function with manual parameter updates
+const ndarray = require('ndarray')
+const { ReLU, Linear, MSE, SGD, Sequential } = require('weblearn')
 
-const { Sequential, Linear, MSECriterion, ReLU, Tensor } = require('weblearn')
+let model = Sequential({
+  optimizer: SGD(.01),
+  loss: MSE()
+})
 
-const mlp = Sequential()
-
-// 2 inputs, 10 hidden units, relu activation, 1 output.
-mlp
-  .add(Linear(2, 10))
+model.add(Linear(2, 20))
   .add(ReLU())
-  .add(Linear(10, 1))
+  .add(Linear(20, 1))
 
-const criterion = MSECriterion()
+// [ input, target ] (both ndarrays)
 
-for(let i = 0; i < 2000; i++){
-  
-  // generate an input for our xor function
-  const input = Tensor([Math.round(Math.random()), Math.round(Math.random())])
-  // input is a tensor containing [0, 0], [0, 1], [1, 0], or [1, 1]
-  
-  const target = Tensor([input.values[0] !== input.values[1] ? 1 : 0])
-  // target is a tensor of either [0] or [1]. label for our xor function.
-
-  // now do a forward pass
-  const output = mlp.forward(input)
-
-  // calculate our error using some criteria
-  criterion.forward(output, target)
-  const err = criterion.backward(output, target)
-
-  // zero the gradients from the last backward pass
-  mlp.zeroGradParameters()
-
-  // compute gradients with respect to input
-  mlp.backward(input, err)
-
-  // apply gradients to parameters with learning rate .1
-  mlp.updateParameters(.1)
+const data = [
+  [ndarray([0, 0]), ndarray([0])],
+  [ndarray([0, 1]), ndarray([1])],
+  [ndarray([1, 0]), ndarray([1])],
+  [ndarray([1, 1]), ndarray([0])]
+]
+for(let i = 0; i < 1000; i++) {
+  model.fit(data, { verbose: false })
 }
 
-let out = mlp.forward(Tensor([0, 0]))
-console.log('[0, 0] -> ' + out.values[0]) // 0 
-
-out = mlp.forward(Tensor([0, 1]))
-console.log('[0, 1] -> ' + out.values[0]) // 1
-
-out = mlp.forward(Tensor([1, 0]))
-console.log('[1, 0] -> ' + out.values[0]) // 1
-
-out = mlp.forward(Tensor([1, 1]))
-console.log('[1, 1] -> ' + out.values[0]) // 0
-
-
+data.forEach(d => {
+  console.log(model.forward(d[0]))
+})
 ```
 
 ## Why JavaScript?
@@ -220,5 +198,7 @@ Check out the [Torch docs here](https://github.com/torch/nn/blob/master/doc/modu
 [weblearn-nu]: https://www.npmjs.com/package/weblearn
 
 [Torch]: http://torch.ch/docs/package-docs.html
+[Keras]: https://keras.io
+[ndarrays]: https://github.com/scijs/ndarray
 [WebTorrent]: https://github.com/feross/webtorrent
 [Webcoin]: https://github.com/mappum/webcoin

@@ -1,15 +1,18 @@
 module.exports = {
   // layers
-  Linear: require('weblearn-layer-linear'),
-  ReLU: require('weblearn-layer-relu'),
-  Sigmoid: require('weblearn-layer-sigmoid'),
+  Linear: require('./lib/layers/linear.js'),
+  ReLU: require('./lib/layers/relu.js'),
 
-  // criteria
-  MSECriterion: require('weblearn-criterion-mse'),
+  // loss functions
+  MSE: require('./lib/losses/mse.js'),
 
-  // containers
-  Sequential: require('weblearn-container-sequential'),
+  // optimizers
+  SGD: require('./lib/optimizers/sgd.js'),
+  RMSProp: require('./lib/optimizers/rmsprop.js'),
 
-  // other
-  Tensor: require('weblearn-tensor')
+  // models
+  Sequential: require('./lib/models/sequential.js'),
+
+  // metrics
+  CategoricalAccuracy: require('./lib/metrics/categorical-accuracy.js')
 }
