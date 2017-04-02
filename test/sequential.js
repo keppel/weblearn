@@ -1,20 +1,25 @@
-const test = require('tape')
-const {Tensor, Sequential, Linear, Tanh, ReLU} = require('../index.js')
+let test = require('tape')
+let { Sequential, Linear, ReLU } = require('../')
+let ndarray = require('ndarray')
 
-test.skip('gradient flow', t=>{
-  t.plan(1)
-  const mlp = Sequential()
-    .add(Linear(2, 4))
-    .add(ReLU())
-    .add(Linear(4, 2))
+test('parameters method on sequential model', t => {
+  t.plan(2)
+  let model = Sequential()
+  model.add(Linear(2, 10))
+  model.add(ReLU())
+  model.add(Linear(10, 1))
 
-  const input = Tensor([1, 1])
-  const output = mlp.forward(input)
-  const target = [10, -10]
-  const err = Tensor(target.map((v, i) => output.values[i] - v))
-  mlp.backward(input, err)
-  mlp.updateParameters(1)
+  // get params:
+  let params = model.parameters()
+  t.ok(params.length === 41)
 
-  const correctedOutput = mlp.forward(input)
-  console.log(correctedOutput)
+  let x = ndarray([1, 1])
+
+  let out1 = model.forward(x)
+
+  // set params:
+  model.parameters(params)
+  let out2 = model.forward(x)
+
+  t.deepEqual(out1.data, out2.data)
 })
